@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="angular.js"></script>
+
+  <style>
+    label
+    {
+      width: 80px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    input
+    {
+      width: 150px;
+      vertical-align: middle;
+    }
+
+    textarea
+    {
+      width: 150px;
+      height: 100px;
+      vertical-align: middle;
+    }
+
+    .valueItems
+    {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body ng-app>
+  <div>
+    <label for="textEdit">Login:</label>
+    <input id="textEdit" type="text" ng-model="textValue" />
+<!---    <span class="valueItems"><strong>Value:</strong> {{textValue}}</span><br /> -->
+	<br>
+    <label for="Password">Password:</label>
+    <input id="Password" type="texts=" ng-model="PasswordValue" />
+<!---     <span class="valueItems"><strong>Value:</strong> {{PasswordValue}}</span><br /> -->
+  </div>
+  
+  <button ng-click="count = count + 1" ng-init="count=0">
+  Login
+  </button>
+<span>
+  count: {{count}}
+</span>
+</body>
+</html>
