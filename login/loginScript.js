@@ -2,16 +2,22 @@ function showLoginRegister(auth){
 				
 
 					 
-                    $register_form = $('<form id="register">'+
-                      '<input type="text" name="register-email" id="register-email" value="email@example.com">'+
-                    '<input type="password" name="register-password" id="register-password" value="password">'+
-                    '<input type="submit" value="Register"/>'+'</form>')
+                    $register_form = $(
+					'<form id="register">' + '<h1>Create Account</h1>' +
+                    '<input type="text" name="register-email" id="register-email" value="Email">' +  
+                    '<input type="password" name="register-password" id="register-password" value="password">' + 
+                    '<input type="submit" name="submit" value="Register" id="submit"/>'+'</form>'
+					)
 
-                    $login_form = $('<form id="login">'+'<input type="text" name="login-email" id="login-email" value="email@example.com">'+
+                    $login_form = $(
+					'<form id="login">'+ '<h1>Login</h1>' +
+					'<input type="text" name="login-email" id="login-email" value="Email">'+
                     '<input type="password" name="login-password" id="login-password" value="password">'+
-                    '<input type="checkbox" name="rememberCheckbox" id="rememberCheckbox" checked>'+
-                    '<input type="submit" value="Sign in"/>'+'</form>')
-                    $('#login_or_register').append($register_form,$login_form);
+                    //'<input type="checkbox" name="rememberCheckbox" id="rememberCheckbox" checked>'+
+                    '<input type="submit" name="submit" "value="Sign in" id="submit"/>'+'</form>'
+					)
+                    
+					$('#login_or_register').append($register_form,$login_form);
 
                     $("#register").submit(function() {
 						
